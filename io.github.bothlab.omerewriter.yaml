@@ -108,9 +108,7 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/codelibre/ome/ome-files-cpp.git
-        commit: d1abffaa9c1d2143735ce254754410e591882bf2
-      - type: patch
-        path: patches/omefiles_gcc15-build-fix.patch
+        commit: 62c982fb367c06dd026363910eb0b364b8af0a41
 
   - name: omerewriter
     buildsystem: cmake-ninja
@@ -118,7 +116,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/bothlab/omerewriter.git
-        tag: v0.1.0
-        commit: 8dd66bbb00abe282ee21fe18250d0d0aa16c264f
-      - type: patch
-        path: patches/omerewriter_no-deploy-script.patch
+        tag: v0.1.1
+        commit: 967b60da5675a39652fb4883413decf721101691
