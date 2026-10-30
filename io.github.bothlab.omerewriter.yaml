@@ -18,8 +18,8 @@ finish-args:
 cleanup:
   - /include
   - /lib/pkgconfig
-  - "*.a"
-  - "*.la"
+  - '*.a'
+  - '*.la'
 
 modules:
   - name: spdlog
@@ -34,14 +34,15 @@ modules:
     sources:
       - type: archive
         url: https://github.com/gabime/spdlog/archive/refs/tags/v1.17.0.tar.gz
-        sha512: 8df117055d19ff21c9c9951881c7bdf27cc0866ea3a4aa0614b2c3939cedceab94ac9abaa63dc4312b51562b27d708cb2f014c68c603fd1c1051d3ed5c1c3087
+        sha512: 
+          8df117055d19ff21c9c9951881c7bdf27cc0866ea3a4aa0614b2c3939cedceab94ac9abaa63dc4312b51562b27d708cb2f014c68c603fd1c1051d3ed5c1c3087
 
   - name: gtest
     buildsystem: cmake-ninja
     sources:
       - type: archive
-        url: https://github.com/google/googletest/archive/refs/tags/v1.17.0.tar.gz
-        sha256: 65fab701d9829d38cb77c14acdc431d2108bfdbf8979e40eb8ae567edf10b27c
+        url: https://github.com/google/googletest/archive/refs/tags/v1.18.0.tar.gz
+        sha256: 6e3191c1455468b3fc35a417fb565c1c5071aee1b7e7f85e30cf48a98d37d8b5
         x-checker-data:
           type: anitya
           project-id: 18290
@@ -52,22 +53,24 @@ modules:
   - name: python3-six
     buildsystem: simple
     build-commands:
-    - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-      --prefix=${FLATPAK_DEST} "six" --no-build-isolation
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "six" --no-build-isolation
     sources:
-    - type: file
-      url: https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl
-      sha256: 4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274
+      - type: file
+        url: 
+          https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl
+        sha256: 4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274
 
   - name: python3-Genshi
     buildsystem: simple
     build-commands:
-    - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-      --prefix=${FLATPAK_DEST} "Genshi" --no-build-isolation
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "Genshi" --no-build-isolation
     sources:
-    - type: file
-      url: https://files.pythonhosted.org/packages/27/69/259f8a1edc358a72c511b145c33b85a7667804a5c8ba04991aa5737d38a4/genshi-0.7.10-py3-none-any.whl
-      sha256: 1c45aa70c06f2fcab68137f040890e4fb105cc539f0121cb86d750656dafc37c
+      - type: file
+        url: 
+          https://files.pythonhosted.org/packages/27/69/259f8a1edc358a72c511b145c33b85a7667804a5c8ba04991aa5737d38a4/genshi-0.7.10-py3-none-any.whl
+        sha256: 1c45aa70c06f2fcab68137f040890e4fb105cc539f0121cb86d750656dafc37c
 
   - name: boost
     buildsystem: simple
